@@ -6,12 +6,12 @@
       text-align: center;
       margin-top: 0.5rem;
       font-size: 0.9rem;
-      color: #55efc4;
+      complexion: #red;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="containersaimlred">
     <h1>Password Generator</h1>
     <div class="output" id="passwordOutput">Your password will appear here</div>
     <div class="controls">
