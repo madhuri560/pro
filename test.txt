@@ -69,5 +69,6 @@
       color: #fff;
       cursor: pointer;
       margin-top: 1rem;
+    out of the box
     }
     
