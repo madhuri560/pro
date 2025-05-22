@@ -1,8 +1,9 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charseton="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Random Password Generating</title>
   <style>
@@ -107,3 +108,33 @@
   </div>
   
 
+
+  <script>
+    const output = document.getElementById("passwordOutput");
+    const lengthInput = document.getElementById("length");
+    const copyMessage = document.getElementById("copyMessage");
+
+    function generatePassword() {
+      const length = +lengthInput.value;
+      const upper = document.getElementById("includeUpper").checked;
+      const lower = document.getElementById("includeLower").checked;
+      const numbers = document.getElementById("includeNumbers").checked;
+      const symbols = document.getElementById("includeSymbols").checked;
+
+      const upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const lowerChars = "abcdefghijklmnopqrstuvwxyz";
+      const numberChars = "0123456789";
+      const symbolChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+
+      let allChars = "";
+      if (upper) allChars += upperChars;
+      if (lower) allChars += lowerChars;
+      if (numbers) allChars += numberChars;
+      if (symbols) allChars += symbolChars;
+
+      if (!allChars) {
+        output.textContent = "Select at least one character type.";
+        return;
+      }
+
+     
