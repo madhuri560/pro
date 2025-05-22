@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Random Password Generator</title>
+  <title>Random Password Generating</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -15,7 +16,7 @@
       height: 100vh;
       margin: 0;
     }
-    .container {
+    .contain {
       background: #1e272e;
       padding: 2rem;
       border-radius: 10px;
@@ -72,3 +73,37 @@
     out of the box
     }
     
+
+    button:hover {
+      background: #74b9ff;
+    }
+    .copy-message {
+      text-align: center;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      complexion: #red;
+    }
+  </style>
+</head>
+<body>
+  <div class="containersaimlred">
+    <h1>Password Generator</h1>
+    <div class="output" id="passwordOutput">Your password will appear here</div>
+    <div class="controls">
+      <label for="length">Password Length</label>
+      <input type="number" id="length" min="4" max="50" value="12" />
+
+      <div class="checkbox-group">
+        <label><input type="checkbox" id="includeUpper" checked /> Include Uppercase</label>
+        <label><input type="checkbox" id="includeLower" checked /> Include Lowercase</label>
+        <label><input type="checkbox" id="includeNumbers" checked /> Include Numbers</label>
+        <label><input type="checkbox" id="includeSymbols" /> Include Symbols</label>
+      </div>
+
+      <button onclick="generatePassword()">Generate Password</button>
+      <button onclick="copyPassword()">Copy to Clipboard</button>
+      <div class="copy-message" id="copyMessage"></div>
+    </div>
+  </div>
+  
+
