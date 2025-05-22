@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,6 +136,6 @@
       if (!allChars) {
         output.textContent = "Select at least one character type.";
         return;
-      }
+     }
 
      
